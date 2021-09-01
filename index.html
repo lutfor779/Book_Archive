@@ -13,11 +13,21 @@
             integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
             crossorigin="anonymous">
 
+        <style>
+            #spinner{
+                display: none;
+            }
+            .spinner-border{
+                width: 3rem; 
+                height: 3rem;
+            }
+        </style>
+        
     </head>
 
-    <body class="bg-warning bg-opacity-10">
-        <header class="mb-3 py-3 bg-danger bg-opacity-10">
-            <h1 class="text-center text-primary">Welcome to BookDB!</h1>
+    <body>
+        <header class="mb-3 py-3 bg-warning bg-opacity-10">
+            <h1 class="text-center text-primary">Welcome to Open Library!</h1>
             <div class="d-flex w-25 mx-auto">
                 <input id="search-text"
                     class="form-control me-2"
@@ -32,10 +42,20 @@
         <!-- main -->
 
         <main class="container">
-            <!-- photo -->
+
+            <!-- spinner -->
+            <div id="spinner"
+                class="text-center">
+                <div class="spinner-border m-5 text-warning"
+                    role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- items count -->
 
             <section>
-                <div class="my-5">
+                <div class="mb-3">
                     <div id="info">
                         <!-- get from js -->
                     </div>
@@ -44,7 +64,7 @@
             </section>
 
 
-            <!-- photos -->
+            <!-- results -->
 
             <section>
                 <div class="my-5">
@@ -56,9 +76,7 @@
 
             </section>
         </main>
-        <footer>
 
-        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
             crossorigin="anonymous"></script>
