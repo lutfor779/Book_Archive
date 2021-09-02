@@ -5,7 +5,7 @@ const getData = () => {
     let search = document.getElementById('search-text');
 
     // check empty data
-    if (search.value == '') {
+    if (search.value === '') {
         document.getElementById('spinner').style.display = 'none';
         const div = document.createElement('div');
         div.classList.add('text-center', 'fs-2', 'fw-bold', 'text-success');
@@ -29,7 +29,7 @@ const displayResults = results => {
     let i = 0;
 
     // check items found
-    if (results.numFound == 0) {
+    if (results.numFound === 0) {
         document.getElementById('spinner').style.display = 'none';
         const div = document.createElement('div');
         div.classList.add('text-center', 'fs-2', 'fw-bold', 'text-danger');
